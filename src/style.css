@@ -1,18 +1,73 @@
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+* {
+  box-sizing: border-box;
 }
 
-.nav-items {
-    list-style: none;
-    display: flex;
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav {
+  height: 75x;
+  display: flex;
+  padding: 20px 36px;
+  box-shadow: 0 0 13px rgb(92, 89, 89);
 }
 
 .nav-logo {
-    width: 40px;
+  max-width: 100px;
 }
 
-.nav-items > li {
-    padding: 10px;
+.main-img {
+  max-width: 200px;
+  align-self: center;
+}
+
+.main-header {
+  margin-bottom: 16px;
+}
+
+.main-text {
+  margin-top: 0;
+}
+
+img {
+  margin: 0;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+section {
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 175px;
+  font-size: 12px;
+}
+
+.card-img {
+  width: 300px;
+}
+
+.card-stats {
+  display: flex;
+  align-items: center;
+}
+
+.rating-star {
+  height: 50px;
+}
+
+.gray {
+    color: #918e91
+}
+
+.bold {
+    font-weight: bold;
 }

@@ -1,22 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Airbnb from "./airbnb/Airbnb";
+import MemeGenerator from "./meme/MemeGenerator";
+import Homepage from "./Homepage";
+import Menu from "./Menu";
 
 function App() {
   return (
     <Router>
-      <div>
-        <h2>Click the corresponding link to view different projects</h2>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li>
-            <a href="/airbnb">Airbnb</a>
-          </li>
-        </ul>
+      <Menu />
         <Routes>
+          <Route path="/" element={<Homepage/>}/>
           <Route path="/airbnb" element={<Airbnb />} />
+          <Route path="/meme-generator" element={<MemeGenerator />}/>
         </Routes>
-      </div>
     </Router>
   );
 }

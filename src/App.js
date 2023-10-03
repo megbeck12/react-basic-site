@@ -1,26 +1,23 @@
 import React from "react";
-import "./style.css";
-import Navbar from "./Navbar";
-import Main from "./Main";
-import Card from "./Card";
-import data from "./data"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Airbnb from "./airbnb/Airbnb";
 
 function App() {
-  const newData = data.map((item) => {
-    return (
-      <Card
-      key={item.id}
-      {...item}
-    />
-    )
-  });
-  
   return (
-    <div>
-      <Navbar />
-      <Main />
-      <section className="cards-list">{newData}</section>
-    </div>
+    <Router>
+      <div>
+        <h2>Click the corresponding link to view different projects</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/airbnb">Airbnb</a>
+          </li>
+        </ul>
+        <Routes>
+          <Route path="/airbnb" element={<Airbnb />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
